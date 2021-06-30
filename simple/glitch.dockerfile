@@ -5,5 +5,5 @@ COPY vendor vendor
 COPY render/api render/api
 COPY go.mod ./
 COPY glitch glitch
-CMD ls glitch/*.go | entr -r ./glitch/re-build.sh
+CMD ls glitch/*.go | entr -n -r ./glitch/re-build.sh
 # CMD ./glitch/re-build.sh

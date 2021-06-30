@@ -5,4 +5,4 @@ COPY vendor vendor
 COPY render/api render/api
 COPY go.mod ./
 COPY red red
-CMD ls red/*.go | entr -r ./red/re-build.sh
+CMD ls red/*.go | entr -n -r ./red/re-build.sh

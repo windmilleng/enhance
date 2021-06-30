@@ -7,4 +7,4 @@ COPY storage/client storage/client
 COPY storage/api storage/api
 COPY go.mod ./
 COPY muxer muxer
-CMD ls muxer/*.go | entr -r ./muxer/re-build.sh
+CMD ls muxer/*.go | entr -n -r ./muxer/re-build.sh
